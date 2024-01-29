@@ -38,6 +38,7 @@
         "lodash": "^4.17.21",
         "lzutf8": "^0.6.0",
         "material-ui-color": "^1.2.0 || ^1.1.0",
+        "microbundle": "^0.15.1",
         "moment": "^2.29.1 || ^2.24.0",
         "morgan": "^1.10.0",
         "notistack": "^1.0.9 || ^0.9.9",
@@ -67,7 +68,6 @@
         "eslint-plugin-react": "^7.17.0",
         "eslint-plugin-standard": "^4.0.1",
         "gh-pages": "^2.2.0",
-        "microbundle": "^0.15.1",
         "nodemon": "^2.0.12",
         "npm-run-all": "^4.1.5",
         "prettier": "^1.19.1",
@@ -82,6 +82,7 @@
     },
     "scripts": {
         "build": "microbundle --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react",
+        "postinstall": "npm run build",
         "start": "microbundle watch --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react"
     },
     "peerDependencies": {
