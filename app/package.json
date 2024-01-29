@@ -83,7 +83,7 @@
     "scripts": {
         "build": "microbundle --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react",
         "start": "microbundle watch --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react",
-        "postinstall": "npm run build"
+        "preinstall": "npm run build"
     },
     "peerDependencies": {
         "react": "^18.2.0",
