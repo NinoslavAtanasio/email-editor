@@ -9,7 +9,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "smart-email-editor": "file:.."
+    "smart-email-editor": "https://gitpkg.now.sh/NinoslavAtanasio/email-editor/app?main"
   },
   "devDependencies": {
     "react-scripts": "4.0.3"
