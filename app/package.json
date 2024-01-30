@@ -82,7 +82,6 @@
     },
     "scripts": {
         "build": "microbundle --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react",
-        "postinstall": "npm run build",
         "start": "microbundle watch --jsx React.createElement --jsxFragment React.Fragment --jsxImportSource react"
     },
     "peerDependencies": {
