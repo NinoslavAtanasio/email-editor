@@ -6,16 +6,11 @@ import {
     Dialog,
     DialogContent,
     DialogTitle,
-    DialogActions,
-    AppBar,
-    Toolbar,
     IconButton,
     Typography,
-    Slide,
     Button,
     Tooltip,
     useTheme,
-    List
 } from "@material-ui/core";
 import LaptopIcon from "@material-ui/icons/Laptop";
 import PhoneAndroidIcon from "@material-ui/icons/PhoneAndroid";
@@ -45,7 +40,6 @@ const useStyles = makeStyles(theme => ({
         color: "black"
     },
     toggleContainer: {
-        // margin: theme.spacing(0, 0)
     },
     topbar: {
         backgroundColor: theme.palette.background.dark

@@ -90,10 +90,6 @@ export const ButtonDefaultProps = {
     linkTarget: "_self"
   },
   style: {
-    // width: "auto",
-    // height: "auto",
-    // fontSize: "1em",
-    // backgroundColor: "",
     size: "medium",
     variant: "text",
     color: "#000000",

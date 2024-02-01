@@ -2,7 +2,6 @@ import { useNode } from "@craftjs/core";
 import { Box } from "@material-ui/core";
 import React from "react";
 import { withTranslation } from "react-i18next";
-import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import {
   SizeAccordion,
@@ -15,23 +14,12 @@ import {
 } from "../UtilComponents/SettingsUtils";
 import { GroupedButtons } from "../UtilComponents/GroupedButtons";
 import { CustomAccordion } from "../UtilComponents/Accordion";
-import { PADDING, MARGIN, BORDER } from "../Defaults";
-const useStyles = makeStyles(theme => ({
-  root: {
-    width: "100%"
-  },
-  heading: {
-    fontSize: theme.typography.pxToRem(15),
-    fontWeight: theme.typography.fontWeightRegular,
-    margin: 2
-  }
-}));
+import { MARGIN } from "../Defaults";
 
 export const DividerSettings = withTranslation()(({ t }) => {
   const {
     actions: { setProp },
     props,
-    active
   } = useNode(node => ({
     props: node.data.props
   }));

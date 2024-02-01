@@ -4,9 +4,9 @@ import React from "react";
 import { ImageDefaultProps, ImageSettings } from "./ImageSettings";
 import { ImagePlaceholder } from "./ImagePlaceholder";
 
-export const Image = ({ props, style, parentStyle, ...rest }) => {
+export const Image = ({ props, style, parentStyle }) => {
     const {
-        connectors: { connect, drag },
+        connectors: { connect },
         id
     } = useNode();
 

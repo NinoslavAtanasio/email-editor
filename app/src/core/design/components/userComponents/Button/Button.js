@@ -1,7 +1,7 @@
 import { useNode } from "@craftjs/core";
 import React from "react";
 import { ButtonDefaultProps, ButtonSettings } from "./ButtonSettings";
-import { Button as MaterialButton, Grid, Link, Typography } from "@material-ui/core";
+import { Button as MaterialButton, Grid } from "@material-ui/core";
 
 //setting border to null if border-width is 0
 function getBorderStyles(style) {
@@ -17,9 +17,9 @@ function getBorderStyles(style) {
     return borderStyles;
 }
 
-export const Button = ({ props, parentStyle, style, ...rest }) => {
+export const Button = ({ props, parentStyle, style }) => {
     const {
-        connectors: { connect, drag },
+        connectors: { connect },
         id
     } = useNode();
     //bgimage/bgcolor
@@ -41,24 +41,6 @@ export const Button = ({ props, parentStyle, style, ...rest }) => {
                 parentStyleCopy
             )}
         >
-            {/* <a
-                class="MuiButtonBase-root MuiButton-root MuiButton-text"
-                type="button"
-                target="_blank"
-                style={Object.assign(
-                    {
-                        display: "inline-block",
-                        webkitAppearance: "button",
-                        mozAppearance: "button",
-                        appearance: "button",
-                        textDecoration: "none"
-                    },
-                    style
-                )}
-                href={props.path}
-            >
-                {props.text}
-            </a> */}
             <MaterialButton
                 href={props.path}
                 target="_blank"

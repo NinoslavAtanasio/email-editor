@@ -3,9 +3,9 @@ import { Grid } from "@material-ui/core";
 import React from "react";
 import { VideoDefaultProps, VideoSettings } from "./VideoSettings";
 import { VideoPlaceholder } from "./VideoPlaceholder";
-export const Video = ({ props, style, parentStyle, ...rest }) => {
+export const Video = ({ props, style, parentStyle }) => {
   const {
-    connectors: { connect, drag },
+    connectors: { connect },
     id
   } = useNode();
 
@@ -32,11 +32,6 @@ export const Video = ({ props, style, parentStyle, ...rest }) => {
     >
       {props.src ? (
         <React.Fragment>
-          {/* <PlayCircleOutlineOutlinedIcon
-                        htmlColor="#fafafa"
-                        fontSize="large"
-                        style={{ position: "absolute" }}
-                    /> */}
           <video style={style} controls>
             <source src={props.src} type="video/mp4" />
             Your browser does not support HTML video.
@@ -45,13 +40,6 @@ export const Video = ({ props, style, parentStyle, ...rest }) => {
       ) : (
         <VideoPlaceholder />
       )}
-      {/* <VideoThumbnail
-                videoUrl={videoUrl}
-                thumbnailHandler={thumbnail => console.log(typeof thumbnail)}
-                width={356}
-                height={200}
-                style={style}
-            /> */}
     </Grid>
   );
 };

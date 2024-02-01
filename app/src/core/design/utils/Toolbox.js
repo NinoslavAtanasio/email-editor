@@ -1,5 +1,4 @@
 import React from "react";
-import { Element } from "@craftjs/core";
 import PropTypes from "prop-types";
 import {
     Button,
@@ -40,19 +39,16 @@ const useStyles = makeStyles(theme => ({
 }));
 export function Toolbox({ anchorEl, onClick, origin, onClose }) {
     const classes = useStyles();
-    //   console.log(anchorEl);
     const isDown = origin !== "top";
     return (
         <Popover
             open={Boolean(anchorEl)}
             elevation={5}
-            // className={classes.popover}
             classes={{
                 paper: classes.paper
             }}
             onClose={onClose}
             anchorEl={anchorEl}
-            // onClose={() => handleClose(index)}
             anchorOrigin={{
                 vertical: origin,
                 horizontal: "center"
@@ -63,7 +59,6 @@ export function Toolbox({ anchorEl, onClick, origin, onClose }) {
             }}
         >
             <Box display="flex">
-                {/* <Box mt={1} /> */}
                 <Tooltip arrow title="Text" aria-label="text" placement={origin}>
                     <IconButton
                         onClick={() => {

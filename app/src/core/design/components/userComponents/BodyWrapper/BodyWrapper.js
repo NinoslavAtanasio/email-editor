@@ -2,7 +2,7 @@ import { useNode } from "@craftjs/core";
 import { Grid } from "@material-ui/core";
 import React from "react";
 import { BodyWrapperDefaultProps, BodyWrapperSettings } from "./BodyWrapperSettings";
-export function BodyWrapper({ style, id, children }) {
+export function BodyWrapper({ id, children }) {
     const {
         connectors: { connect }
     } = useNode();

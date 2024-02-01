@@ -24,7 +24,7 @@ let customStyleMap = {
 };
 const useStyles = makeStyles(theme => ({
   hideToolbar: {
-    diaplay: "none"
+    display: "none"
   },
   showToolbar: {
     display: "block",
@@ -65,7 +65,7 @@ export function Text({ props, style, parentStyle }) {
   const theme = useTheme();
 
   const {
-    connectors: { connect, drag },
+    connectors: { connect },
     actions: { setProp },
     isActive,
     dom,

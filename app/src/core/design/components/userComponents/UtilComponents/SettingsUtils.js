@@ -7,7 +7,7 @@ import {
   Button as MaterialButton,
   CircularProgress
 } from "@material-ui/core";
-import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useState } from "react";
 import Typography from "@material-ui/core/Typography";
 import { MarginComponent, PaddingComponent } from "./PaddingMargin";
 import { BorderComponent } from "./Border";
@@ -22,7 +22,6 @@ import LaunchIcon from "@material-ui/icons/Launch";
 import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 import { styled } from "@material-ui/styles";
 import { withTranslation } from "react-i18next";
-import { imageUpload } from "../../../utils/imageUpload";
 import useUpload from "../../../../../hooks/useUpload";
 
 export const PaddingAccordion = withTranslation()(({ t, props, setProp, styleProp = "parentStyle" }) => {
@@ -333,9 +332,6 @@ export const BackgroundAccordion = withTranslation()(({ t, props, setProp, isSel
           }
           {!isBgImage ? (
             <Box mt={2} m={1}>
-              {/* <Typography variant="subtitle2" color="textSecondary">
-                                Background Image
-                            </Typography> */}
               <CustomColorPicker
                 value={getBg(false)}
                 onChange={val => {
@@ -375,14 +371,6 @@ export const BackgroundAccordion = withTranslation()(({ t, props, setProp, isSel
 export const AccordionHeader = withTranslation()(({ title }) => {
   return (
     <Box display="flex" alignItems="center" ml={2} mt={4} mb={1}>
-      {/* <PhotoSizeSelectSmallIcon
-                color="secondary"
-                style={{
-                    height: 15,
-                    width: 15,
-                    marginRight: 5
-                }}
-            /> */}
       <Typography variant="caption" color="secondary">
         {title.toUpperCase()}
       </Typography>

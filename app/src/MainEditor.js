@@ -83,13 +83,11 @@ export default forwardRef((
   }));
 
   const onPreviewOpen = () => {
-    // postMessage("previewOpen", true);
     setMode("preview");
     setTriggerFetchState(true);
   };
 
   const onHtmlOpen = () => {
-    // postMessage("htmlOpen", true);
     setMode("html");
     setTriggerFetchState(true);
   };

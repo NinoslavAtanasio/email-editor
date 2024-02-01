@@ -14,9 +14,9 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export const RightPanel = withTranslation()(({ t, ...rest }) => {
+export const RightPanel = withTranslation()(({ t }) => {
   const classes = useStyles();
-  const { actions, query, selected, rootNode } = useEditor((state, query) => {
+  const { selected, rootNode } = useEditor((state, query) => {
     const currentNodeId = state.events.selected;
     let selected;
     if (currentNodeId) {

@@ -15,7 +15,6 @@ import ZoomOutMapIcon from "@material-ui/icons/ZoomOutMap";
 import { renderNodeUtils } from "./renderNodeUtils";
 import FilterNoneIcon from "@material-ui/icons/FilterNone";
 
-// import cx from "classnames";
 const useStyles = makeStyles(theme => ({
   componentSelected: {
     position: "relative",
@@ -103,23 +102,6 @@ export const RenderNode = withTranslation()(({ t, render }) => {
       if (dom && id !== ROOT_NODE) {
         dom.style.position = "relative";
         dom.style.transition = "all 100ms ease-out";
-
-        // dom.style.borderStyle = "solid";
-        // dom.style.borderColor = "transparent";
-        // dom.style.borderWidth = "2px";
-        // dom.style.transition = "all 100ms ease-out";
-        // dom.style.boxShadow = null;
-        // dom.style.borderRadius = null;
-        // if (isHover || isActive) {
-        //     dom.style.borderRadius = "2px";
-        //     if (isActive) {
-        //         dom.style.borderColor = primaryTransparent;
-        //         // dom.style.boxShadow = "0 0 6px " + theme.palette.primary.main + "AA";
-        //     } else {
-        //         dom.style.borderColor = theme.palette.text.secondary + "DD";
-        //         // dom.style.boxShadow = "0 0 6px " + theme.palette.text.primary + "AA";
-        //     }
-        // }
       }
     },
     [dom, isHover, isActive]
@@ -327,7 +309,6 @@ export const RenderNode = withTranslation()(({ t, render }) => {
                   position: "absolute",
                   alignItems: "center",
                   display: "flex",
-                  //   visibility: `${getPos(dom).width}`,
                   backgroundColor: isActive
                     ? primaryTransparent
                     : theme.palette.text.secondary + "DD",

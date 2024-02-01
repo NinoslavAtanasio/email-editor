@@ -1,15 +1,8 @@
 import { Switch, Box } from "@material-ui/core";
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import { withTranslation } from "react-i18next";
 import { GroupedButtons } from "./GroupedButtons";
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    width: "100%"
-  }
-}));
 
 export function PaddingComponent({ props, setProp, styleProp }) {
   return (
@@ -29,8 +22,6 @@ MarginComponent.defaultProps = {
 };
 
 function SingleSpacingChange({ propKey, propName, setProp, props, propType, styleProp, title }) {
-  const classes = useStyles();
-
   function getSpacing() {
     let val = props[styleProp][propKey];
     return val;

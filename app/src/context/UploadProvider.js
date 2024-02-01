@@ -20,6 +20,4 @@ UploadProvider.propTypes = {
   uploader: PropTypes.func.isRequired,
 };
 
-export const UploadConsumer = UploadContext.Consumer;
-
 export default UploadContext;

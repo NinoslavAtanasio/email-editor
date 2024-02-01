@@ -1,5 +1,4 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core";
 import ace from "brace"; /// NEVER REMOVE THIS, LINE BELOW BRACE SCRIPTS USES THIS INSTANCE
 import "brace/mode/json";
 import "brace/mode/xml";
@@ -10,33 +9,8 @@ import "brace/theme/textmate";
 import "brace/ext/language_tools";
 import "brace/ext/searchbox";
 import AceEditor from "react-ace";
-const useStyles = makeStyles(() => ({
-    root: {
-        minHeight: "100%"
-    },
-    jsonTextField: {
-        background: "#fffee6",
-        backgroundColor: "#fffee6",
-        fontFamily: "Monospace"
-    }
-}));
-
-// export class CustomHighlightRules extends window.ace.acequire("ace/mode/text_highlight_rules").TextHighlightRules {
-//   constructor() {
-//     super();
-//     this.$rules = {
-//       start: [
-//         {
-//           token: "keyword",
-//           regex: "{{(\s)*\w+(\s)*}}"
-//         }
-//       ]
-//     };
-//   }
-// }
 
 function Editor({
-    className,
     value,
     mode,
     isView,

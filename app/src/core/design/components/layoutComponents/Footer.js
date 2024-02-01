@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { ButtonGroup, Button as MaterialButton } from "@material-ui/core";
 import { useEditor } from "@craftjs/core";
@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
 }));
 export function Footer({ onPreviewOpen, onHtmlOpen }) {
   const classes = useStyles();
-  const { actions, query, canUndo, canRedo } = useEditor((state, query) => ({
+  const { actions, canUndo, canRedo } = useEditor((state, query) => ({
     enabled: state.options.enabled,
     canUndo: query.history.canUndo(),
     canRedo: query.history.canRedo()

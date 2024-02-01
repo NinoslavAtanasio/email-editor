@@ -1,24 +1,8 @@
 import { Button as MaterialButton, ButtonGroup } from "@material-ui/core";
 import React, { useEffect } from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import { Input } from "@material-ui/core";
 
-const useStyles = makeStyles(theme => ({
-    root: {
-        width: "100%"
-    },
-    heading: {
-        fontSize: theme.typography.pxToRem(15),
-        fontWeight: theme.typography.fontWeightRegular,
-        margin: 2
-    },
-    disabledButtons: {
-        color: "#eeeeee"
-    }
-}));
-
 export function GroupedButtons({ displayProp, handleChange, mode }) {
-    const classes = useStyles();
     const validateProp = displayProp => {
         if (!displayProp || displayProp === "") {
             return "0";

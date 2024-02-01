@@ -37,7 +37,6 @@ export const Resizer = ({ children, style, parentStyle, props, craftRef }) => {
           <React.Fragment>{children}</React.Fragment>
         ) : (
           <Box
-            //p={8}
             bgcolor={theme.palette.primary.main + "30"}
             width="100%"
             minHeight="25vh"

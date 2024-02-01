@@ -2,7 +2,6 @@ import { useEditor, useNode } from "@craftjs/core";
 import React, { useState } from "react";
 import { withTranslation } from "react-i18next";
 import { Button as MaterialButton, Box } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import { PADDING, MARGIN, BORDER } from "../Defaults";
 import { ConfirmationDialog } from "../../../../components/ConfirmationDialog";
@@ -13,27 +12,9 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import { ResizerSettings } from "./ResizerSettings";
 import lodash from "lodash";
-const useStyles = makeStyles(theme => ({
-  root: {
-    width: "100%"
-  },
-  heading: {
-    fontSize: theme.typography.pxToRem(15),
-    fontWeight: theme.typography.fontWeightRegular,
-    padding: 2
-  },
-  Accordion: {
-    backgroundColor: "#e0e0e0"
-  }
-}));
 
 let cnfContent = "";
 function Columns({ t, type, handleColumns, props }) {
-  const {
-    query: { node }
-  } = useEditor();
-  const { id } = useNode();
-  const children = node(id).descendants();
   let w = 100 / type;
   const [cnfOpen, setCnfOpen] = React.useState(false);
   var normalColumnStyle = {
@@ -115,10 +96,8 @@ export const ContainerSettings = withTranslation()(({ t }) => {
     id,
     actions: { setProp },
     props,
-    name,
     nodes,
     linkedNodes,
-    customDisplayName
   } = useNode(node => {
     return {
       props: node.data.props,
@@ -129,7 +108,6 @@ export const ContainerSettings = withTranslation()(({ t }) => {
     };
   });
 
-  const classes = useStyles();
   const [tabValue, setTabValue] = useState(0);
   const handleColumns = value => {
     if (Object.values(linkedNodes).length) {

@@ -8,7 +8,7 @@ export const Container = ({ children, style, parentStyle, props }) => {
   const type = props.containerType;
   const w = 12 / type;
   const {
-    connectors: { connect, drag }
+    connectors: { connect }
   } = useNode(node => {
     return {};
   });

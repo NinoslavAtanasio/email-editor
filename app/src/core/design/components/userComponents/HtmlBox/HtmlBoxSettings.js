@@ -1,7 +1,6 @@
 import React from "react";
 import { useNode } from "@craftjs/core";
 import { withTranslation } from "react-i18next";
-import { makeStyles } from "@material-ui/core/styles";
 import { unescapeHTML } from "../../../utils/unescapeHtml";
 import {
   AccordionHeader,
@@ -11,16 +10,6 @@ import {
 import Editor from "../../../../components/AceEditor";
 import { CustomAccordion } from "../UtilComponents/Accordion";
 import { MARGIN, PADDING } from "../Defaults";
-const useStyles = makeStyles(theme => ({
-  root: {
-    width: "100%"
-  },
-  heading: {
-    fontSize: theme.typography.pxToRem(15),
-    fontWeight: theme.typography.fontWeightRegular,
-    margin: 2
-  }
-}));
 
 let isHtmlPaste = true;
 
@@ -28,11 +17,9 @@ export const HtmlBoxSettings = withTranslation()(({ t }) => {
   const {
     actions: { setProp },
     props,
-    active
   } = useNode(node => ({
     props: node.data.props
   }));
-  const classes = useStyles();
   const [html, setHtml] = React.useState(unescapeHTML(props.props.html));
   const handleHtmlChange = value => {
     if (isHtmlPaste) {
@@ -80,7 +67,6 @@ export const HtmlBoxDefaultProps = {
     ...PADDING,
 
     ...MARGIN
-    // overflowWrap: "break-word"
   },
   options: {
     paddingOptions: "less",

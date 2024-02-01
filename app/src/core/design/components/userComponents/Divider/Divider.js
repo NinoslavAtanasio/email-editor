@@ -5,9 +5,9 @@ import React from "react";
 
 import { DividerDefaultProps, DividerSettings } from "./DividerSettings";
 
-export function CustomDivider({ style, parentStyle, ...rest }) {
+export function CustomDivider({ style, parentStyle }) {
     const {
-        connectors: { connect, drag },
+        connectors: { connect },
         id
     } = useNode();
 

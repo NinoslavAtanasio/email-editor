@@ -1,7 +1,6 @@
 import { useEditor } from "@craftjs/core";
 import React from "react";
 import { withTranslation } from "react-i18next";
-import { makeStyles } from "@material-ui/core/styles";
 
 import {
   AccordionHeader,
@@ -12,26 +11,11 @@ import {
 } from "../UtilComponents";
 
 import { ContainerDefaultProps } from "./ContainerSettings";
-const useStyles = makeStyles(theme => ({
-  root: {
-    width: "100%"
-  },
-  heading: {
-    fontSize: theme.typography.pxToRem(15),
-    fontWeight: theme.typography.fontWeightRegular,
-    padding: 2
-  },
-  Accordion: {
-    backgroundColor: "#e0e0e0"
-  }
-}));
 
 export const ResizerSettings = withTranslation()(({ t, id, isParent }) => {
-  // console.log(id);
   const {
     actions: { setProp },
-    state,
-    query: { node }
+    state
   } = useEditor((state, query) => {
     return {
       state: state

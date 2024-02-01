@@ -16,7 +16,7 @@ const FONT_FAMILIES = [
   }
 ];
 
-function FontSize({ editorState, setEditorState, editorInstance }) {
+function FontSize({ editorState, editorInstance }) {
   const getCurFontSize = () => {
     let fontSize = 16;
     for (let i = 0; i < 144; i++) {
@@ -47,7 +47,7 @@ function FontSize({ editorState, setEditorState, editorInstance }) {
   );
 }
 
-function Placeholder({ editorState, setEditorState, editorInstance }) {
+function Placeholder({ editorState, editorInstance }) {
   const { settings } = useSettings();
   const placeholders = settings?.editor?.placeholders ?? [];
 
@@ -92,7 +92,6 @@ export const editorConfig = (
     },
     controls: [
       "headings",
-      // "font-family",
 
       {
         key: "font-size",
@@ -144,7 +143,6 @@ export const editorConfig = (
       {
         key: "toolbar-placeholders",
         type: "component",
-        type: "dropdown",
         title: "Placeholders",
         showArrow: true,
         arrowActive: false,
@@ -158,7 +156,7 @@ export const editorConfig = (
           />
         )
       },
-      "seperator",
+      "separator",
       {
         key: "toolbar-collapse",
         type: "component",
@@ -183,17 +181,6 @@ export const editorConfig = (
             >
               <Typography variant="caption">Close</Typography>
             </Button>
-            {/* <IconButton
-                            onClick={() => {
-                                setProp(props => {
-                                    props.props.hideToolbar = true;
-                                });
-                                editorInstance.current.draftInstance.blur();
-                            }}
-                            size="small"
-                        >
-                            <HighlightOffIcon fontSize="small" />
-                        </IconButton> */}
           </Tooltip>
         )
       },

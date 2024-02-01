@@ -4,10 +4,10 @@ import React, { useEffect } from "react";
 
 import { HtmlBoxDefaultProps, HtmlBoxSettings } from "./HtmlBoxSettings";
 
-export const HtmlBox = ({ props, parentStyle, style, ...rest }) => {
+export const HtmlBox = ({ props, parentStyle }) => {
     const {
         id,
-        connectors: { connect, drag }
+        connectors: { connect }
     } = useNode();
     useEffect(() => {
         document.getElementById(id).innerHTML = props.html;

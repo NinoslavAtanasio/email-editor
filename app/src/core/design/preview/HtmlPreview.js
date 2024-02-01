@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Slide from "@material-ui/core/Slide";
 import { Box, useTheme } from "@material-ui/core";
 const useStyles = makeStyles(theme => ({
     appBar: {
@@ -28,10 +27,6 @@ const useStyles = makeStyles(theme => ({
         marginRight: 3
     }
 }));
-
-const Transition = React.forwardRef(function Transition(props, ref) {
-    return <Slide direction="up" ref={ref} {...props} />;
-});
 
 function Laptop({ children }) {
     const classes = useStyles();

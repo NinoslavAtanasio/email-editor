@@ -5,4 +5,3 @@ export * from "./ColorPicker";
 export * from "./GroupedButtons";
 export * from "./PaddingMargin";
 export * from "./SettingsUtils";
-export * from "./formatChecker";

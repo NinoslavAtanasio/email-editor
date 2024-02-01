@@ -6,8 +6,8 @@ import { BodyWrapper, Container } from "../userComponents/index";
 import { ContainerDefaultProps } from "../userComponents/Container/ContainerSettings";
 
 
-export default function Design({ editorState, onHtmlOpen }) {
-  const { actions, enabled, canUndo, canRedo, connectors, rootNode } = useEditor(
+export default function Design({ editorState }) {
+  const { actions, enabled, connectors, rootNode } = useEditor(
     (state, query) => ({
       enabled: state.options.enabled,
       canUndo: query.history.canUndo(),

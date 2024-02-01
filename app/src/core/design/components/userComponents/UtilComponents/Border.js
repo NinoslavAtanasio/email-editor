@@ -1,16 +1,9 @@
 import { TextField, MenuItem, Switch, Box } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 import { withTranslation } from "react-i18next";
 import { CustomColorPicker } from "./ColorPicker";
 import { GroupedButtons } from "./GroupedButtons";
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    width: "100%"
-  }
-}));
 
 const Border = withTranslation()(({ t, propKey, propName, setProp, props, styleProp }) => {
   const borderStylesOpts = [
@@ -86,7 +79,6 @@ const Border = withTranslation()(({ t, propKey, propName, setProp, props, styleP
 });
 
 export const BorderComponent = withTranslation()(({ t, props, setProp, styleProp = "style" }) => {
-  const classes = useStyles();
   const handleOptionChange = () => {
     let value = props[styleProp].borderTop;
 

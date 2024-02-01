@@ -1,20 +1,12 @@
 import ToggleButton from "@material-ui/lab/ToggleButton";
 import ToggleButtonGroup from "@material-ui/lab/ToggleButtonGroup";
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import FormatAlignCenterIcon from "@material-ui/icons/FormatAlignCenter";
 import FormatAlignJustifyIcon from "@material-ui/icons/FormatAlignJustify";
 import FormatAlignLeftIcon from "@material-ui/icons/FormatAlignLeft";
 import FormatAlignRightIcon from "@material-ui/icons/FormatAlignRight";
 
-const useStyles = makeStyles(theme => ({
-    root: {
-        width: "100%"
-    }
-}));
-
 export function Alignment({ props, setProp, propKey }) {
-    const classes = useStyles();
     return (
         <ToggleButtonGroup
             exclusive

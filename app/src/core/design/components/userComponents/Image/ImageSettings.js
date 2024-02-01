@@ -1,7 +1,6 @@
 import React from "react";
 import { useNode } from "@craftjs/core";
 import { withTranslation } from "react-i18next";
-import { makeStyles } from "@material-ui/core/styles";
 import {
   AccordionHeader,
   ActionAccordion,
@@ -15,16 +14,6 @@ import {
 } from "../UtilComponents/SettingsUtils";
 import { BORDER, MARGIN, PADDING } from "../Defaults";
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    width: "100%"
-  },
-  heading: {
-    fontSize: theme.typography.pxToRem(15),
-    fontWeight: theme.typography.fontWeightRegular,
-    padding: 2
-  }
-}));
 export const ImageSettings = withTranslation()(({ t }) => {
   const {
     actions: { setProp },
@@ -32,7 +21,6 @@ export const ImageSettings = withTranslation()(({ t }) => {
   } = useNode(node => ({
     props: node.data.props
   }));
-  const classes = useStyles();
 
   return (
     <div>
